@@ -33,7 +33,7 @@ struct WelcomeView: View {
                     .font(.headline)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
-                    .padding()
+                    .padding(30)
                 
                 Spacer()
                 
