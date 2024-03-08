@@ -12,6 +12,7 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var showRegistration = false
+   
     
     var body: some View {
         
@@ -42,7 +43,7 @@ struct LoginView: View {
             Spacer()
                         
             Button(action: {
-                // Action for login button
+                
             }) {
                 Text("Login")
                     .font(.headline)
@@ -52,6 +53,8 @@ struct LoginView: View {
                     .background(AppColor.accent)
                     .cornerRadius(10)
             }
+
+            
             .padding()
                         
             Button(action: {

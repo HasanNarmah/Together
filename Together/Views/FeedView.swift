@@ -9,7 +9,41 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing:8){
+            //images
+            Rectangle()
+                .frame(height: 320)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            
+            //listing details
+            HStack{
+                VStack(alignment: .leading){
+                  Text("Hasan Narmah")
+                        .fontWeight(.semibold)
+                    
+                    Text("London, UK")
+                        .foregroundColor(.gray)
+                    
+                    HStack(spacing: 4) {
+                        Text("Posted")
+                            .foregroundColor(.gray)
+                            
+                        Text("6:01")
+                            .foregroundColor(.gray)
+                    }
+                }
+                
+                Spacer()
+                
+                HStack(spacing: 2){
+                    Image(systemName: "bubble.circle.fill")
+                    padding()
+                }
+            }
+            
+            .font(.footnote)
+        }
+        .padding()
     }
 }
 
