@@ -14,7 +14,7 @@
 		1D09FFEF2B9A01ED0016F0DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFEE2B9A01ED0016F0DE /* LoginView.swift */; };
 		1D09FFF12B9A02050016F0DE /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF02B9A02050016F0DE /* RegistrationView.swift */; };
 		1D09FFF42B9A02750016F0DE /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF32B9A02750016F0DE /* FeedView.swift */; };
-		1D09FFF62B9A02820016F0DE /* NearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF52B9A02820016F0DE /* NearbyView.swift */; };
+		1D09FFF62B9A02820016F0DE /* Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF52B9A02820016F0DE /* Nearby.swift */; };
 		1D09FFF82B9A028D0016F0DE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF72B9A028D0016F0DE /* ProfileView.swift */; };
 		1D09FFFA2B9A02B00016F0DE /* AppColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF92B9A02B00016F0DE /* AppColour.swift */; };
 		1D7846BF2B9CC29C00B15B84 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7846BE2B9CC29C00B15B84 /* MainView.swift */; };
@@ -32,7 +32,7 @@
 		1D09FFF02B9A02050016F0DE /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		1D09FFF22B9A02540016F0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1D09FFF32B9A02750016F0DE /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
-		1D09FFF52B9A02820016F0DE /* NearbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyView.swift; sourceTree = "<group>"; };
+		1D09FFF52B9A02820016F0DE /* Nearby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby.swift; sourceTree = "<group>"; };
 		1D09FFF72B9A028D0016F0DE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1D09FFF92B9A02B00016F0DE /* AppColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColour.swift; sourceTree = "<group>"; };
 		1D7846BE2B9CC29C00B15B84 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -90,18 +90,34 @@
 		1D09FFED2B9A01B70016F0DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D09FFE12B9A019E0016F0DE /* WelcomeView.swift */,
-				1D09FFEE2B9A01ED0016F0DE /* LoginView.swift */,
-				1D09FFF02B9A02050016F0DE /* RegistrationView.swift */,
-				1D09FFF32B9A02750016F0DE /* FeedView.swift */,
-				1D09FFF52B9A02820016F0DE /* NearbyView.swift */,
+				1D14D4BF2B9CE90500DE13A0 /* WelcomeViews */,
+				1D14D4BE2B9CE7CF00DE13A0 /* FeedViews */,
+				1D09FFF52B9A02820016F0DE /* Nearby.swift */,
 				1D09FFF72B9A028D0016F0DE /* ProfileView.swift */,
 				1D09FFF92B9A02B00016F0DE /* AppColour.swift */,
-				1DDB70442B9AFF2F00B06AA6 /* PostsView.swift */,
 				1D7846BE2B9CC29C00B15B84 /* MainView.swift */,
 				1D7846C02B9CC2E900B15B84 /* SearchUserView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1D14D4BE2B9CE7CF00DE13A0 /* FeedViews */ = {
+			isa = PBXGroup;
+			children = (
+				1DDB70442B9AFF2F00B06AA6 /* PostsView.swift */,
+				1D09FFF32B9A02750016F0DE /* FeedView.swift */,
+			);
+			path = FeedViews;
+			sourceTree = "<group>";
+		};
+		1D14D4BF2B9CE90500DE13A0 /* WelcomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				1D09FFE12B9A019E0016F0DE /* WelcomeView.swift */,
+				1D09FFEE2B9A01ED0016F0DE /* LoginView.swift */,
+				1D09FFF02B9A02050016F0DE /* RegistrationView.swift */,
+			);
+			path = WelcomeViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +192,7 @@
 			files = (
 				1D09FFF42B9A02750016F0DE /* FeedView.swift in Sources */,
 				1D7846C12B9CC2E900B15B84 /* SearchUserView.swift in Sources */,
-				1D09FFF62B9A02820016F0DE /* NearbyView.swift in Sources */,
+				1D09FFF62B9A02820016F0DE /* Nearby.swift in Sources */,
 				1D09FFE22B9A019E0016F0DE /* WelcomeView.swift in Sources */,
 				1D7846BF2B9CC29C00B15B84 /* MainView.swift in Sources */,
 				1D09FFEF2B9A01ED0016F0DE /* LoginView.swift in Sources */,

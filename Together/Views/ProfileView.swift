@@ -9,7 +9,28 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Hasan Narmah")
+                .font(.custom("Futura", size: 36))
+                .foregroundColor(AppColor.text)
+                .fontWeight(.bold)
+                .padding()
+            
+            Spacer()
+            
+            
+            Circle()
+                .frame(height: 150)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .position(CGPoint(x: 200.0, y: 100.0))
+            
+            Spacer()
+            
+            
+            Rectangle()
+                .frame(height: 400)
+        }
+        
     }
 }
 

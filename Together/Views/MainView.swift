@@ -24,7 +24,7 @@ struct MainView: View {
                       Text("Search")
                   }
             
-            NearbyView()
+            Nearby()
                 .tabItem{
                     Image(systemName: "location.circle")
                     Text("Nearby")
@@ -38,6 +38,7 @@ struct MainView: View {
         }
         //changing tab lable colour
         .tint(AppColor.accent)
+        
     }
 }
 

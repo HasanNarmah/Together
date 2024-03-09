@@ -20,6 +20,8 @@ struct PostsView: View {
                 VStack(alignment: .leading){
                   Text("Hasan Narmah")
                         .fontWeight(.semibold)
+                        .font(.custom("Futura", size: 15))
+                        .foregroundColor(AppColor.accent)
                     
                     Text("London, UK")
                         .foregroundColor(.gray)
@@ -36,7 +38,19 @@ struct PostsView: View {
                 Spacer()
                 
                 HStack(spacing: 2){
-                    Image(systemName: "bubble.circle.fill")
+                    Image(systemName: "text.bubble")
+                        .resizable()
+                        .frame(width: 30.0, height: 30.0)
+                        .foregroundColor(AppColor.accent)
+                        .padding()
+                    
+                    
+                    
+                    Image(systemName: "hand.thumbsup")
+                        .resizable()
+                        .frame(width: 30.0, height: 30.0)
+                        .foregroundColor(AppColor.accent)
+                        .padding()
                 }
             }
             
