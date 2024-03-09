@@ -11,20 +11,23 @@ struct FeedView: View {
     var body: some View {
        
         NavigationStack{
-
-            ScrollView{
-                VStack {
-                    Text("Together 🌍")
-                        .font(.custom("Futura", size: 36))
-                        .foregroundColor(AppColor.text)
-                        .fontWeight(.bold)
-                        .padding()
-                }
-                LazyVStack (spacing: 32){
-                    ForEach(0...10, id:\.self){ listing in
-                        PostsView()
-                            .frame(height: 400)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+            
+            ZStack {
+                AppColor.background.ignoresSafeArea()
+                ScrollView{
+                    VStack {
+                        Text("Together 🌍")
+                            .font(.custom("Futura", size: 36))
+                            .foregroundColor(AppColor.text)
+                            .fontWeight(.bold)
+                            .padding()
+                    }
+                    LazyVStack (spacing: 32){
+                        ForEach(0...10, id:\.self){ listing in
+                            PostsView()
+                                .frame(height: 400)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
                     }
                 }
             }
