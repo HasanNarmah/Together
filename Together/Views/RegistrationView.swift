@@ -26,22 +26,24 @@ struct RegistrationView: View {
                 Spacer()
                 
                 Text("Registration")
-                    .font(.title)
-                    .fontWeight(.bold)
+                    .font(.custom("Futura", size: 36))
                     .padding()
                 
                 TextField("Name", text: $name)
+                    .multilineTextAlignment(.center)
                     .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
                 
                 TextField("Email", text: $email)
+                    .multilineTextAlignment(.center)
                     .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(.none)
                 
                 SecureField("Password", text: $password)
+                    .multilineTextAlignment(.center)
                     .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                Spacer()
                 
                 Button(action: {
                     // Action for registration button

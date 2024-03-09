@@ -13,7 +13,7 @@ struct FeedView: View {
         NavigationStack{
             
             ZStack {
-                AppColor.background.ignoresSafeArea()
+                //AppColor.background.ignoresSafeArea()
                 ScrollView{
                     VStack {
                         Text("Together 🌍")
