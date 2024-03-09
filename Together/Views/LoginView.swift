@@ -12,6 +12,7 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var showRegistration = false
+    @State private var showMainView = false
    
     
     var body: some View {
@@ -43,7 +44,8 @@ struct LoginView: View {
             Spacer()
                         
             Button(action: {
-               
+                self.showMainView = true
+                
             }) {
                 Text("Login")
                     .font(.headline)
@@ -53,7 +55,9 @@ struct LoginView: View {
                     .background(AppColor.accent)
                     .cornerRadius(10)
             }
-
+            .sheet(isPresented: $showMainView) {
+                MainView()
+            }
             
             .padding()
                         
@@ -69,9 +73,7 @@ struct LoginView: View {
                     .cornerRadius(10)
                                 
             }
-            .sheet(isPresented: $showRegistration) {
-                RegistrationView()
-            }
+
             .padding()
             Spacer()
         }
