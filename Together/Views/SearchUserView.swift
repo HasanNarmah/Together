@@ -11,57 +11,54 @@ import SwiftUI
 
 struct SearchUserView: View {
     @State private var searchText = ""
-    
     var body: some View {
         
-        VStack {
-            Text("Search 🔍")
-                .font(.custom("Futura", size: 36))
-                .foregroundColor(AppColor.text)
-                .fontWeight(.bold)
-                .padding()
-        
-            SearchBar(text: $searchText)
-                .padding(.horizontal)
+        NavigationStack(){
             
-            List {
-                ForEach(1..<10) { index in
-                    Text("Item \(index)")
+            List{
+                ForEach(0...10, id:\.self){ user in
+                    NavigationLink {
+                        //                   ReusableProfileContent(user: user)
+                    } label: {
+                        Text("username")
+                            .font(.callout)
+                        
+                        
+                    }
+                }
+            }
+            
+            
+
+            .listStyle(.plain)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Search")
+            .font(.custom("Futura", size: 36))
+            .searchable(text: $searchText)
+            .onSubmit(of: .search, {
+                //fetching user from firebase
+                //            Task{await searchUsers()}
+            })
+            
+            
+            .onChange(of: searchText, perform: { newValue in
+                if newValue.isEmpty{
+                    //                fetchedUsers = []
+                }
+            })
+
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button("Cancel") {
+                        
+                    }
+                    .tint(.red)
                 }
             }
         }
-        .navigationBarTitle("Search")
     }
 }
 
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchUserView()
-    }
-}
-
-struct SearchBar: View {
-    @Binding var text: String
-    var body: some View {
-        HStack {
-            TextField("Search", text: $text)
-                .padding(8)
-                .background(Color(.systemGray6))
-                .cornerRadius(10)
-                .padding()
-            
-            Button(action: {
-                self.text = ""
-            }) {
-                Image(systemName: "xmark.circle.fill")
-                    .foregroundColor(.gray)
-                    .padding(8)
-            }
-            .padding(.trailing, 8)
-            .opacity(text.isEmpty ? 0 : 1)
-        }
-    }
-}
 
 
 #Preview {

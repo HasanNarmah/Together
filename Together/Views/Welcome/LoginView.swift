@@ -59,7 +59,7 @@ struct LoginView: View {
                     .background(AppColor.accent)
                     .cornerRadius(10)
             }
-            .sheet(isPresented: $showMainView) {
+            .fullScreenCover(isPresented: $showMainView) {
                 MainView()
             }
             

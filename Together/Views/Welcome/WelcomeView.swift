@@ -48,7 +48,7 @@ struct WelcomeView: View {
                         .cornerRadius(10)
                     
                 }
-                .sheet(isPresented: $showLogin) {
+                .fullScreenCover(isPresented: $showLogin) {
                     LoginView()
                 }
             }
