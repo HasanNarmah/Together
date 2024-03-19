@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
     var body: some View {
-        VStack{
-            Text("Hasan Narmah")
-                .font(.custom("Futura", size: 36))
+        Text("Together 🌍")
+            .font(.custom("Futura", size: 36))
             .foregroundColor(AppColor.text)
             .fontWeight(.bold)
             .padding()
-        }
     }
 }
+    
+    #Preview {
+        ProfileView()
+    }
 
-#Preview {
-    ProfileView()
-}

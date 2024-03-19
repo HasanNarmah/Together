@@ -29,7 +29,7 @@ struct WelcomeView: View {
                     .fontWeight(.bold)
                     .foregroundColor(AppColor.text)
                 
-                Text("Together is a tool for those who are caught in a conflict.")
+                Text("Empowering Connections, Rebuilding Lives Together")
                     .font(.headline)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
@@ -48,6 +48,7 @@ struct WelcomeView: View {
                         .cornerRadius(10)
                     
                 }
+                .padding(50)
                 .fullScreenCover(isPresented: $showLogin) {
                     LoginView()
                 }

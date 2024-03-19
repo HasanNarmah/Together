@@ -92,8 +92,8 @@
 		1D09FFED2B9A01B70016F0DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D14D4C02B9DA03F00DE13A0 /* Profile */,
 				1D14D4BF2B9CE90500DE13A0 /* Welcome */,
+				1D14D4C02B9DA03F00DE13A0 /* Profile */,
 				1D14D4BE2B9CE7CF00DE13A0 /* Feed */,
 				1D09FFF52B9A02820016F0DE /* Nearby.swift */,
 				1D09FFF92B9A02B00016F0DE /* AppColour.swift */,

@@ -14,11 +14,12 @@ struct PostsView: View {
             Rectangle()
                 .frame(height: 320)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .foregroundColor(AppColor.background)
             
             //listing details
             HStack{
                 VStack(alignment: .leading){
-                  Text("Hasan Narmah")
+                  Text("Jane Doe")
                         .fontWeight(.semibold)
                         .font(.custom("Futura", size: 15))
                         .foregroundColor(AppColor.accent)

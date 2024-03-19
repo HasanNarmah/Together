@@ -41,11 +41,11 @@ struct SearchUserView: View {
             })
             
             
-            .onChange(of: searchText, perform: { newValue in
-                if newValue.isEmpty{
-                    //                fetchedUsers = []
-                }
-            })
+//            .onChange(of: searchText, perform: { newValue in
+//                if newValue.isEmpty{
+//                    //                fetchedUsers = []
+//                }
+//            })
 
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading){

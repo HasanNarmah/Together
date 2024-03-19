@@ -37,8 +37,8 @@ struct MainView: View {
                 }
         }
         //changing tab lable colour
+        .background(Color.clear)
         .tint(AppColor.accent)
-        
     }
 }
 
