@@ -13,13 +13,14 @@ struct WelcomeView: View {
     
     var body: some View {
         ZStack{
-            //AppColor.background.ignoresSafeArea()
+ 
             VStack {
+                
                 Text("Together 🌍")
                     .font(.custom("Futura", size: 36))
                     .foregroundColor(AppColor.text)
                     .fontWeight(.bold)
-                    .padding()
+                    .padding(50)
                 
                 Spacer()
                 Text("👋")
