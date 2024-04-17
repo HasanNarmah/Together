@@ -82,36 +82,7 @@ struct Location {
     let title: String
 }
 
-// Implementation of the API when found
-//init() {
-//       fetchLocations()
-//   }
-//
-//   func fetchLocations() {
-//       // Replace this with your API endpoint
-//       let endpoint = "https://api.example.com/locations"
-//       guard let url = URL(string: endpoint) else { return }
-//
-//       URLSession.shared.dataTask(with: url) { data, response, error in
-//           if let error = error {
-//               print("Error fetching data: \(error.localizedDescription)")
-//               return
-//           }
-//
-//           guard let data = data else { return }
-//
-//           // Parse the response data to obtain the locations
-//           do {
-//               let locations = try JSONDecoder().decode([Location].self, from: data)
-//               DispatchQueue.main.async {
-//                   self.locations = locations
-//               }
-//           } catch {
-//               print("Error parsing data: \(error.localizedDescription)")
-//           }
-//       }.resume()
-//   }
-//}
+
 
 
 #Preview {

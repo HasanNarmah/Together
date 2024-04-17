@@ -36,6 +36,6 @@ func scrapeConflictLocations(fromURL url: String) {
 }
 
 // Call the main function
-main()
+
 
 
