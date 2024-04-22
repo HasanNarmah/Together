@@ -18,18 +18,18 @@ struct MainView: View {
                     Text("Posts")
                 }
             
-            SearchUserView()
-                  .tabItem{
-                      Image(systemName: "magnifyingglass.circle.fill")
-                      Text("Search")
-                  }
-            
             Nearby()
                 .tabItem{
                     Image(systemName: "location.circle")
                     Text("Nearby")
                 }
             
+            SearchUserView()
+                  .tabItem{
+                      Image(systemName: "magnifyingglass.circle.fill")
+                      Text("Search")
+                  }
+        
 //            ProfileView()
 //                .tabItem{
 //                    Image(systemName: "person.crop.circle.fill")

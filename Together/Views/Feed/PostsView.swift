@@ -12,7 +12,7 @@ struct PostsView: View {
         VStack(spacing:8){
             //images
             Rectangle()
-                .frame(height: 320)
+                .frame(height: 250)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .foregroundColor(AppColor.background)
             

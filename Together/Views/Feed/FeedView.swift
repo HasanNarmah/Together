@@ -21,15 +21,17 @@ struct FeedView: View {
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading){
                    Text("Together")
-                        .font(.custom("Futura", size: 36))
+                        .font(.custom("Futura", size: 30))
                         .foregroundColor(AppColor.text)
                         .fontWeight(.bold)
                         .padding(.bottom)
                 }
-                ToolbarItem(placement: .topBarTrailing){
-                  Image(systemName: "person.fill")
-                        .resizable()
-                        
+                ToolbarItem(placement: .navigationBarTrailing){
+                   Image(systemName: "person.fill")
+                        .font(.custom("Futura", size: 20))
+                        .foregroundColor(AppColor.text)
+                        .fontWeight(.bold)
+                        .padding(.bottom)
                 }
             }
         }

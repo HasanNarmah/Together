@@ -42,18 +42,28 @@
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     }
              
-                Button{
-                    
-                }   label: {
+//  this will be changed once the authenication backend is made
+                NavigationLink{
+                    FeedView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
                     Text("Login")
-                        .modifier(ButtonModifiers())
+                    .modifier(ButtonModifiers())
                 }
+                
+//                Button{
+//                    MainView()
+//                }   label: {
+//                    Text("Login")
+//                        .modifier(ButtonModifiers())
+//                }
+                
                 Spacer()
                 
                 Divider()
                 
                 NavigationLink{
-                    RegistrationView()
+                    AddNameView()
                         .navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing: 3){
