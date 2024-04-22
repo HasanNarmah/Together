@@ -9,30 +9,35 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        
-        
-       
         NavigationStack{
-            
-            ZStack {
-                //AppColor.background.ignoresSafeArea()
-                ScrollView{
-                    LazyVStack (spacing: 32){
-                        ForEach(0...10, id:\.self){ listing in
-                            PostsView()
-                                .frame(height: 400)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                        }
+            ScrollView{
+                LazyVStack{
+                    ForEach(0...10, id: \.self) { post in
+                        PostsView()
                     }
                 }
             }
-            .navigationBarTitle("Together")
-            .font(.custom("Futura", size: 40))
-            .navigationBarTitleDisplayMode(.automatic)
+            
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading){
+                   Text("Together")
+                        .font(.custom("Futura", size: 36))
+                        .foregroundColor(AppColor.text)
+                        .fontWeight(.bold)
+                        .padding(.bottom)
+                }
+                ToolbarItem(placement: .topBarTrailing){
+                  Image(systemName: "person.fill")
+                        .resizable()
+                        
+                }
+            }
         }
+        
     }
 }
+    
+    #Preview {
+        FeedView()
+    }
 
-#Preview {
-    FeedView()
-}

@@ -11,9 +11,6 @@
             
         @State private var email = ""
         @State private var password = ""
-        @State private var showRegistration = false
-        @State private var showMainView = false
-            
         
     var body: some View {
         NavigationStack{
@@ -27,18 +24,11 @@
                 
             VStack {
                 TextField("Email", text: $email)
-                    .font(.subheadline)
-                    .padding(12)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 24)
+                    .autocapitalization(.none)
+                    .modifier(TextFieldModifiers())
                 
                 SecureField("Password" , text: $password)
-                    .font(.subheadline)
-                    .padding(12)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 24)
+                    .modifier(TextFieldModifiers())
             }
                     
                 NavigationLink{
@@ -47,23 +37,16 @@
                     Text("Forgot Password?")
                         .font(.footnote)
                         .fontWeight(.semibold)
-                        .padding(.top)
+                        .padding(.vertical)
                         .padding(.trailing, 28)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     }
-                
-                .padding(10)
-                
+             
                 Button{
                     
                 }   label: {
                     Text("Login")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width: 352, height: 44)
-                        .background(.blue)
-                        .cornerRadius(8)
+                        .modifier(ButtonModifiers())
                 }
                 Spacer()
                 
@@ -71,6 +54,7 @@
                 
                 NavigationLink{
                     RegistrationView()
+                        .navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing: 3){
                         Text("Don't have an account?")

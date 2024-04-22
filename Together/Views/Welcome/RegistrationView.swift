@@ -11,11 +11,11 @@ struct RegistrationView: View {
     @State private var name = ""
     @State private var email = ""
     @State private var password = ""
-    @State private var showLogin = false
+    @Environment(\.dismiss) var dismiss
         
     var body: some View {
 
-        NavigationView {
+        
             NavigationStack{
                 VStack{
                     Spacer()
@@ -26,43 +26,49 @@ struct RegistrationView: View {
                     .padding(50)
                     
                 VStack {
+                    
+                    TextField("Name", text: $name)
+                        .modifier(TextFieldModifiers())
+                    
                     TextField("Email", text: $email)
+                        .modifier(TextFieldModifiers())
+                    
                     SecureField("Password" , text: $password)
+                        .modifier(TextFieldModifiers())
                 }
                     
                     Button{
-                        
+                       
                     }   label: {
-                        Text("Register")
+                        Text("Sign Up")
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .frame(width: 352, height: 44)
                             .background(.blue)
                             .cornerRadius(8)
+                            .padding()
                     }
                     Spacer()
                     
                     Divider()
                     
-                    NavigationLink{
-                        LoginView()
+                    Button{
+                        dismiss()
                     } label: {
                         HStack(spacing: 3){
-                            Text("Have an account?")
-                            
+                            Text("Already have an account?")
                             Text("Login")
                                 .fontWeight(.semibold)
                         }
                         .font(.footnote)
-                        .foregroundColor(.black)
                     }
                     .padding(.vertical, 16)
                     }
                 }
             }
         }
-    }
+    
 
 
 #Preview {

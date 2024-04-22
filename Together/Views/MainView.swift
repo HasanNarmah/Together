@@ -30,11 +30,11 @@ struct MainView: View {
                     Text("Nearby")
                 }
             
-            ProfileView()
-                .tabItem{
-                    Image(systemName: "person.crop.circle.fill")
-                    Text("Profile")
-                }
+//            ProfileView()
+//                .tabItem{
+//                    Image(systemName: "person.crop.circle.fill")
+//                    Text("Profile")
+//                }
         }
         //changing tab lable colour
         .background(Color.clear)
