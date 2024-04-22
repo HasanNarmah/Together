@@ -27,7 +27,18 @@
                 
             VStack {
                 TextField("Email", text: $email)
+                    .font(.subheadline)
+                    .padding(12)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                    .padding(.horizontal, 24)
+                
                 SecureField("Password" , text: $password)
+                    .font(.subheadline)
+                    .padding(12)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                    .padding(.horizontal, 24)
             }
                     
                 NavigationLink{
@@ -40,6 +51,8 @@
                         .padding(.trailing, 28)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     }
+                
+                .padding(10)
                 
                 Button{
                     
