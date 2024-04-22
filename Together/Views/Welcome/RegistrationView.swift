@@ -16,69 +16,51 @@ struct RegistrationView: View {
     var body: some View {
 
         NavigationView {
-            VStack {
-                Text("Together 🌍")
+            NavigationStack{
+                VStack{
+                    Spacer()
+                    Text("Together 🌍")
                     .font(.custom("Futura", size: 36))
                     .foregroundColor(AppColor.text)
                     .fontWeight(.bold)
-                    .padding()
-                
-                Spacer()
-                
-                Text("Registration")
-                    .font(.custom("Futura", size: 36))
-                    .padding()
-                
-                TextField("Name", text: $name)
-                    .multilineTextAlignment(.center)
-                    .padding()
+                    .padding(50)
                     
-                
-                TextField("Email", text: $email)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                    .autocapitalization(.none)
-                
-                SecureField("Password", text: $password)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                
-                Spacer()
-                
-                Button(action: {
-                    // Action for registration button
-                }) {
-                    Text("Register")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(AppColor.accent)
-                        .cornerRadius(10)
+                VStack {
+                    TextField("Email", text: $email)
+                    SecureField("Password" , text: $password)
                 }
-                .padding()
-                
-                Button(action: {
-                    self.showLogin = true
-                }) {
-                    Text("Login")
-                        .font(.headline)
-                        .foregroundColor(AppColor.accent)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.clear)
-                        .cornerRadius(10)
                     
+                    Button{
+                        
+                    }   label: {
+                        Text("Register")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(width: 352, height: 44)
+                            .background(.blue)
+                            .cornerRadius(8)
+                    }
+                    Spacer()
+                    
+                    Divider()
+                    
+                    NavigationLink{
+                        LoginView()
+                    } label: {
+                        HStack(spacing: 3){
+                            Text("Have an account?")
+                            
+                            Text("Login")
+                                .fontWeight(.semibold)
+                        }
+                        .font(.footnote)
+                        .foregroundColor(.black)
+                    }
+                    .padding(.vertical, 16)
+                    }
                 }
-                .sheet(isPresented: $showLogin) {
-                    LoginView()
-                }
-                .padding()
-                
-                Spacer()
             }
-            .padding()
-        }
         }
     }
 

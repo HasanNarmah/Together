@@ -13,9 +13,7 @@ struct WelcomeView: View {
     
     var body: some View {
         ZStack{
- 
             VStack {
-                
                 Text("Together 🌍")
                     .font(.custom("Futura", size: 36))
                     .foregroundColor(AppColor.text)
