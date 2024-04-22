@@ -13,9 +13,7 @@ struct CompleteSignUpView: View {
     
     var body: some View {
         
-        let name = "Together"
-        
-        
+       
         VStack(spacing: 12){
             Text("Welcome to Together, Jane Doe")
                 .font(.title2)

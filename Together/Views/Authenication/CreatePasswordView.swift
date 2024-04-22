@@ -34,11 +34,12 @@ struct CreatePasswordView: View {
                 .autocapitalization(.none)
                 .modifier(TextFieldModifiers())
             
-            Button{
-                print("move to password")
-            }   label: {
+            NavigationLink{
+                CompleteSignUpView()
+                    .navigationBarBackButtonHidden(true)
+            } label: {
                 Text("Next")
-                    .modifier(ButtonModifiers())
+                .modifier(ButtonModifiers())
             }
             Spacer()
         }

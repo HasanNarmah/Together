@@ -135,8 +135,8 @@
 				1DB051D42BD6BA3700D00C3E /* AddLocationView.swift */,
 				1DB051CE2BD6B16500D00C3E /* AddEmailView.swift */,
 				1DB051D22BD6B6E200D00C3E /* CreatePasswordView.swift */,
-				1D09FFEE2B9A01ED0016F0DE /* LoginView.swift */,
 				1DB051D62BD6BBED00D00C3E /* CompleteSignUpView.swift */,
+				1D09FFEE2B9A01ED0016F0DE /* LoginView.swift */,
 			);
 			path = Authenication;
 			sourceTree = "<group>";
