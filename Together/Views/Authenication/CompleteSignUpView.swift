@@ -12,8 +12,6 @@ struct CompleteSignUpView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        
-       
         VStack(spacing: 12){
             Text("Welcome to Together, Jane Doe")
                 .font(.title2)
