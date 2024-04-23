@@ -44,7 +44,7 @@
              
 //  this will be changed once the authenication backend is made
                 NavigationLink{
-                    FeedView()
+                    MainView()
                         .navigationBarBackButtonHidden(true)
                 } label: {
                     Text("Login")
