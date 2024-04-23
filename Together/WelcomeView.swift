@@ -9,13 +9,11 @@ import SwiftUI
 
 struct WelcomeView: View {
     
-    @State private var showLogin = false
-    
     var body: some View {
         ZStack{
             VStack {
                 Text("Together 🌍")
-                    .font(.custom("Futura", size: 36))
+                    .font(.custom("Futura", size: 46))
                     .foregroundColor(AppColor.text)
                     .fontWeight(.bold)
                     .padding(50)
@@ -36,25 +34,19 @@ struct WelcomeView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    self.showLogin = true
-                }) {
-                    Text("Get Started")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(AppColor.accent)
-                        .cornerRadius(10)
-                    
+                NavigationLink{
+                    CompleteSignUpView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Next")
+                    .modifier(ButtonModifiers())
                 }
-                .padding(50)
-                .fullScreenCover(isPresented: $showLogin) {
-                    LoginView()
                 }
             }
+        
         }
     }
-}
+
 
 #Preview {
     WelcomeView()

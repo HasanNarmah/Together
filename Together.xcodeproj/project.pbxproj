@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D01F69E2BD7B0C700AD33A7 /* TextFontModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01F69D2BD7B0C700AD33A7 /* TextFontModifiers.swift */; };
 		1D09FFE02B9A019E0016F0DE /* TogetherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFDF2B9A019E0016F0DE /* TogetherApp.swift */; };
 		1D09FFE22B9A019E0016F0DE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFE12B9A019E0016F0DE /* WelcomeView.swift */; };
 		1D09FFE42B9A019F0016F0DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D09FFE32B9A019F0016F0DE /* Assets.xcassets */; };
@@ -16,7 +17,6 @@
 		1D09FFF62B9A02820016F0DE /* Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF52B9A02820016F0DE /* Nearby.swift */; };
 		1D09FFF82B9A028D0016F0DE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF72B9A028D0016F0DE /* ProfileView.swift */; };
 		1D09FFFA2B9A02B00016F0DE /* AppColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFF92B9A02B00016F0DE /* AppColour.swift */; };
-		1D14D4C32B9DA0AE00DE13A0 /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D14D4C22B9DA0AE00DE13A0 /* ProfileInfoView.swift */; };
 		1D7846BF2B9CC29C00B15B84 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7846BE2B9CC29C00B15B84 /* MainView.swift */; };
 		1D7846C12B9CC2E900B15B84 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7846C02B9CC2E900B15B84 /* SearchUserView.swift */; };
 		1DB051C72BD6902200D00C3E /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB051C62BD6902200D00C3E /* TextFieldModifiers.swift */; };
@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D01F69D2BD7B0C700AD33A7 /* TextFontModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFontModifiers.swift; sourceTree = "<group>"; };
 		1D09FFDC2B9A019E0016F0DE /* Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Together.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D09FFDF2B9A019E0016F0DE /* TogetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogetherApp.swift; sourceTree = "<group>"; };
 		1D09FFE12B9A019E0016F0DE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		1D09FFF52B9A02820016F0DE /* Nearby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby.swift; sourceTree = "<group>"; };
 		1D09FFF72B9A028D0016F0DE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1D09FFF92B9A02B00016F0DE /* AppColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColour.swift; sourceTree = "<group>"; };
-		1D14D4C22B9DA0AE00DE13A0 /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
 		1D7846BE2B9CC29C00B15B84 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1D7846C02B9CC2E900B15B84 /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 		1DB051C62BD6902200D00C3E /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
@@ -145,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				1D09FFF72B9A028D0016F0DE /* ProfileView.swift */,
-				1D14D4C22B9DA0AE00DE13A0 /* ProfileInfoView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 				1D09FFF92B9A02B00016F0DE /* AppColour.swift */,
 				1DB051C82BD6918900D00C3E /* ButtonModifiers.swift */,
 				1DB051C62BD6902200D00C3E /* TextFieldModifiers.swift */,
+				1D01F69D2BD7B0C700AD33A7 /* TextFontModifiers.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -260,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DB051C92BD6918900D00C3E /* ButtonModifiers.swift in Sources */,
-				1D14D4C32B9DA0AE00DE13A0 /* ProfileInfoView.swift in Sources */,
 				1D09FFF42B9A02750016F0DE /* FeedView.swift in Sources */,
 				1DB051C72BD6902200D00C3E /* TextFieldModifiers.swift in Sources */,
 				1D7846C12B9CC2E900B15B84 /* SearchUserView.swift in Sources */,
@@ -275,6 +274,7 @@
 				1DB051CC2BD6AC3500D00C3E /* SearchListView.swift in Sources */,
 				1D09FFE02B9A019E0016F0DE /* TogetherApp.swift in Sources */,
 				1D09FFF82B9A028D0016F0DE /* ProfileView.swift in Sources */,
+				1D01F69E2BD7B0C700AD33A7 /* TextFontModifiers.swift in Sources */,
 				1DDB70452B9AFF2F00B06AA6 /* PostsView.swift in Sources */,
 				1DB051D52BD6BA3700D00C3E /* AddLocationView.swift in Sources */,
 				1D09FFFA2B9A02B00016F0DE /* AppColour.swift in Sources */,
