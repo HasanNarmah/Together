@@ -3,6 +3,7 @@
 ## Project Overview:
 
 "Together" is a mobile application aimed at fostering communities and aiding individuals who have been internally displaced due to various circumstances. The application serves as a foundational system to assist in the recovery process from displacement, providing essential features to facilitate connections, safety, and support among displaced individuals.
+![Simulator Screenshot - iPhone 15 Pro - 2024-04-23 at 15 37 52](https://github.com/HasanNarmah/Together/assets/34106106/4ba0778b-d7d7-4552-8a68-bb3f20c5db90)
 
 ## Key Features:
 
