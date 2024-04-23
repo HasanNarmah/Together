@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D01F69E2BD7B0C700AD33A7 /* TextFontModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01F69D2BD7B0C700AD33A7 /* TextFontModifiers.swift */; };
+		1D01F6A22BD7C69D00AD33A7 /* ProfileFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01F6A12BD7C69D00AD33A7 /* ProfileFilter.swift */; };
+		1D01F6A42BD7D02200AD33A7 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01F6A32BD7D02200AD33A7 /* CreatePostView.swift */; };
 		1D09FFE02B9A019E0016F0DE /* TogetherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFDF2B9A019E0016F0DE /* TogetherApp.swift */; };
 		1D09FFE22B9A019E0016F0DE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FFE12B9A019E0016F0DE /* WelcomeView.swift */; };
 		1D09FFE42B9A019F0016F0DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D09FFE32B9A019F0016F0DE /* Assets.xcassets */; };
@@ -27,11 +29,13 @@
 		1DB051D32BD6B6E200D00C3E /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB051D22BD6B6E200D00C3E /* CreatePasswordView.swift */; };
 		1DB051D52BD6BA3700D00C3E /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB051D42BD6BA3700D00C3E /* AddLocationView.swift */; };
 		1DB051D72BD6BBED00D00C3E /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB051D62BD6BBED00D00C3E /* CompleteSignUpView.swift */; };
-		1DDB70452B9AFF2F00B06AA6 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB70442B9AFF2F00B06AA6 /* PostsView.swift */; };
+		1DDB70452B9AFF2F00B06AA6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB70442B9AFF2F00B06AA6 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D01F69D2BD7B0C700AD33A7 /* TextFontModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFontModifiers.swift; sourceTree = "<group>"; };
+		1D01F6A12BD7C69D00AD33A7 /* ProfileFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilter.swift; sourceTree = "<group>"; };
+		1D01F6A32BD7D02200AD33A7 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		1D09FFDC2B9A019E0016F0DE /* Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Together.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D09FFDF2B9A019E0016F0DE /* TogetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogetherApp.swift; sourceTree = "<group>"; };
 		1D09FFE12B9A019E0016F0DE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -53,7 +57,7 @@
 		1DB051D22BD6B6E200D00C3E /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		1DB051D42BD6BA3700D00C3E /* AddLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
 		1DB051D62BD6BBED00D00C3E /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
-		1DDB70442B9AFF2F00B06AA6 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		1DDB70442B9AFF2F00B06AA6 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		1D09FFED2B9A01B70016F0DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1D01F6A32BD7D02200AD33A7 /* CreatePostView.swift */,
 				1D7846BE2B9CC29C00B15B84 /* MainView.swift */,
 				1D14D4BE2B9CE7CF00DE13A0 /* Feed */,
 				1DB051CA2BD6937500D00C3E /* Nearby */,
@@ -122,7 +127,7 @@
 		1D14D4BE2B9CE7CF00DE13A0 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				1DDB70442B9AFF2F00B06AA6 /* PostsView.swift */,
+				1DDB70442B9AFF2F00B06AA6 /* PostCell.swift */,
 				1D09FFF32B9A02750016F0DE /* FeedView.swift */,
 			);
 			path = Feed;
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				1D09FFF72B9A028D0016F0DE /* ProfileView.swift */,
+				1D01F6A12BD7C69D00AD33A7 /* ProfileFilter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -264,8 +270,10 @@
 				1DB051C72BD6902200D00C3E /* TextFieldModifiers.swift in Sources */,
 				1D7846C12B9CC2E900B15B84 /* SearchUserView.swift in Sources */,
 				1D09FFF62B9A02820016F0DE /* Nearby.swift in Sources */,
+				1D01F6A22BD7C69D00AD33A7 /* ProfileFilter.swift in Sources */,
 				1D09FFE22B9A019E0016F0DE /* WelcomeView.swift in Sources */,
 				1DB051D72BD6BBED00D00C3E /* CompleteSignUpView.swift in Sources */,
+				1D01F6A42BD7D02200AD33A7 /* CreatePostView.swift in Sources */,
 				1DB051D12BD6B4A500D00C3E /* AddNameView.swift in Sources */,
 				1D7846BF2B9CC29C00B15B84 /* MainView.swift in Sources */,
 				1D09FFEF2B9A01ED0016F0DE /* LoginView.swift in Sources */,
@@ -275,7 +283,7 @@
 				1D09FFE02B9A019E0016F0DE /* TogetherApp.swift in Sources */,
 				1D09FFF82B9A028D0016F0DE /* ProfileView.swift in Sources */,
 				1D01F69E2BD7B0C700AD33A7 /* TextFontModifiers.swift in Sources */,
-				1DDB70452B9AFF2F00B06AA6 /* PostsView.swift in Sources */,
+				1DDB70452B9AFF2F00B06AA6 /* PostCell.swift in Sources */,
 				1DB051D52BD6BA3700D00C3E /* AddLocationView.swift in Sources */,
 				1D09FFFA2B9A02B00016F0DE /* AppColour.swift in Sources */,
 			);

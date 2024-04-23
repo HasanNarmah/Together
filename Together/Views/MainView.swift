@@ -12,29 +12,37 @@ struct MainView: View {
         
         //TabView with recent posts and profile tab
         TabView {
+            
           FeedView()
                 .tabItem{
                     Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled")
-                    Text("Posts")
-                }
-            
-            Nearby()
-                .tabItem{
-                    Image(systemName: "location.circle")
-                    Text("Nearby")
+                    
                 }
             
             SearchUserView()
                   .tabItem{
                       Image(systemName: "magnifyingglass.circle.fill")
-                      Text("Search")
+                      
                   }
-        
-//            ProfileView()
-//                .tabItem{
-//                    Image(systemName: "person.crop.circle.fill")
-//                    Text("Profile")
-//                }
+            
+            CreatePostView()
+                .tabItem{
+                    Image(systemName: "plus")
+                    
+                }
+            
+            Nearby()
+                .tabItem{
+                    Image(systemName: "location.circle")
+                    
+                }
+            
+
+            ProfileView()
+                .tabItem{
+                    Image(systemName: "person.crop.circle.fill")
+                    
+                }
         }
         //changing tab lable colour
         .background(Color.clear)

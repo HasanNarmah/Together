@@ -35,7 +35,7 @@ struct WelcomeView: View {
                 Spacer()
                 
                 NavigationLink{
-                    CompleteSignUpView()
+                    LoginView()
                         .navigationBarBackButtonHidden(true)
                 } label: {
                     Text("Next")

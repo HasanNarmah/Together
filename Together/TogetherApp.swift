@@ -11,7 +11,8 @@ import SwiftUI
 struct TogetherApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            //change to welcome page when issues with welcome page connection is fixed
+            LoginView()
         }
     }
 }

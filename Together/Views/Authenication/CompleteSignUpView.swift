@@ -33,10 +33,10 @@ struct CompleteSignUpView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            
-            Button{
-                print("move to mainview")
-            }   label: {
+            NavigationLink{
+                MainView()
+                    .navigationBarBackButtonHidden(true)
+            }label: {
                 Text("Complete sign up")
                     .modifier(ButtonModifiers())
             }

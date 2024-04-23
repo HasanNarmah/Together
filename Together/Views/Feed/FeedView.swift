@@ -10,23 +10,17 @@ import SwiftUI
 struct FeedView: View {
     var body: some View {
         NavigationStack{
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 LazyVStack{
                     ForEach(0...10, id: \.self) { post in
-                        PostsView()
+                        PostCell()
                     }
                 }
             }
             
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading){
-                   Text("Together")
-                        .modifier(TextFontModifiers())
-                        .fontWeight(.bold)
-                        .padding(.bottom)
-                }
-                ToolbarItem(placement: .navigationBarTrailing){
-                   Image(systemName: "person.fill")
+                   Text("Together 🌍")
                         .modifier(TextFontModifiers())
                         .fontWeight(.bold)
                         .padding(.bottom)
