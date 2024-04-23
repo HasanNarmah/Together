@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreatePostView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("This is the view that will show how to post a post on Together")
     }
 }
 
