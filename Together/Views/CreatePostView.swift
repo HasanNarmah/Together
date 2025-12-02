@@ -5,7 +5,6 @@
 //  Created by Hasan Narmah on 23/04/2024.
 //
 
-
 import SwiftUI
 import PhotosUI
 import CoreLocationUI
@@ -23,7 +22,7 @@ struct CreatePostView: View {
     let communities = ["General", "Tech", "Art", "Sports"] // Replace with your actual community list
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     // Post text input
@@ -115,9 +114,9 @@ struct CreatePostView: View {
                     }
                     
                     // Community picker
-                    Picker("Select Community", selection: $selectedCommunity) {
-                        ForEach(communities, id: \.self) {
-                            Text($0)
+                    Picker("Categories", selection: $selectedCommunity) {
+                        ForEach(communities, id: \.self) { community in
+                            Text(community).tag(community)
                         }
                     }
                     .pickerStyle(MenuPickerStyle())
@@ -151,7 +150,7 @@ struct CreatePostView: View {
 
 // Video picker implementation
 struct VideoPicker: UIViewControllerRepresentable {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) private var dismiss
     @Binding var selectedVideo: URL?
     
     func makeUIViewController(context: Context) -> UIImagePickerController {
@@ -169,22 +168,27 @@ struct VideoPicker: UIViewControllerRepresentable {
     
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         let parent: VideoPicker
-        init(_ parent: VideoPicker) { self.parent = parent }
+        
+        init(_ parent: VideoPicker) {
+            self.parent = parent
+        }
+        
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let url = info[.mediaURL] as? URL {
                 parent.selectedVideo = url
             }
-            parent.presentationMode.wrappedValue.dismiss()
+            picker.dismiss(animated: true)
         }
+        
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            parent.presentationMode.wrappedValue.dismiss()
+            picker.dismiss(animated: true)
         }
     }
 }
 
 // Location picker stub (replace with your own logic or integration)
 struct LocationPicker: View {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) private var dismiss
     @Binding var selectedLocation: CLLocationCoordinate2D?
     
     var body: some View {
@@ -193,10 +197,10 @@ struct LocationPicker: View {
             Button("Select Example Location") {
                 // Example: Set a fixed location
                 selectedLocation = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }
             Button("Cancel") {
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }
         }
     }
@@ -205,3 +209,4 @@ struct LocationPicker: View {
 #Preview {
     CreatePostView()
 }
+
