@@ -34,20 +34,3 @@
   
 - **Continuous Safety Improvements:** Incorporate machine learning and real-time data analysis to enhance the accuracy and timeliness of safety alerts.
 
-## Contributing:
-
-Contributions to Together are welcome! Whether it's code contributions, bug reports, or feature suggestions, we value community input in making Together a comprehensive and impactful platform for displaced individuals.
-
-## Get Started:
-
-To get started with Together, please refer to the [documentation](link-to-documentation) for installation instructions and usage guidelines.
-
-## Contact Us:
-
-For inquiries, feedback, or collaboration opportunities, feel free to reach out to us at [contact@example.com](mailto:contact@example.com).
-
-## License:
-
-This project is licensed under the [MIT License](link-to-license). Feel free to use and modify the codebase according to your needs.
-
-Together, let's build a stronger, more connected community for those experiencing displacement.
