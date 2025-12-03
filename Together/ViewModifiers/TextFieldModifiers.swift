@@ -12,8 +12,13 @@ struct TextFieldModifiers: ViewModifier {
     func body(content: Content) -> some View{
         content
             .font(.subheadline)
+            .foregroundColor(AppColor.text)
             .padding(12)
-            .background(Color(.systemGray6))
+            .background(AppColor.background)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(AppColor.separator, lineWidth: 1)
+            )
             .cornerRadius(10)
             .padding(.horizontal, 24)
     }

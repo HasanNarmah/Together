@@ -14,7 +14,7 @@ struct ButtonModifiers: ViewModifier {
             .fontWeight(.semibold)
             .foregroundColor(.white)
             .frame(width: 352, height: 44)
-            .background(AppColor.accent)
+            .background(AppColor.primary)
             .cornerRadius(8)
             .padding()
     }
