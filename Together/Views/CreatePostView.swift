@@ -11,6 +11,7 @@ import CoreLocationUI
 import CoreLocation
 
 struct CreatePostView: View {
+    @Environment(\.dismiss) private var dismiss
     @State private var postText: String = ""
     @State private var selectedPhotos: [PhotosPickerItem] = []
     @State private var selectedPhotoImages: [UIImage] = []
@@ -276,6 +277,13 @@ struct CreatePostView: View {
             }
             .navigationTitle("Post")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
+            }
             .offset(y: isVisible ? 0 : UIScreen.main.bounds.height)
             .opacity(isVisible ? 1 : 0)
             .onAppear {
